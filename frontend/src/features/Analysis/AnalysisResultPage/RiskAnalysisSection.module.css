@@ -1,0 +1,507 @@
+/* 디자인 시스템 변수 */
+:root {
+  /* 색상 */
+  --color-primary: #6b4eff;
+  --color-primary-light: #8a7aff;
+  --color-primary-dark: #4a3dcc;
+  --color-secondary: #f5f5f5;
+  --color-text-primary: #2c3e50;
+  --color-text-secondary: #7f8c8d;
+  --color-background: #ffffff;
+  --color-border: #e0e0e0;
+  --color-success: #2ecc71;
+  --color-warning: #f1c40f;
+  --color-error: #e74c3c;
+  --color-card-bg: #f8f8f8;
+  --color-gradient: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-dark)
+  );
+
+  /* 간격 */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* 테두리 */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  /* 그림자 */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  /* 애니메이션 */
+  --transition-speed: 0.3s;
+  --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* 위험도 색상 변수 */
+  --risk-serious: #d63031;
+  --risk-warning: #e17055;
+  --risk-caution: #fdcb6e;
+  --risk-normal: #0984e3;
+
+  /* 위험도 배경색 변수 */
+  --risk-serious-bg: #ffe5e5;
+  --risk-warning-bg: #fff3e0;
+  --risk-caution-bg: #fff9e6;
+  --risk-normal-bg: #e3f2fd;
+}
+
+.container {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.mainAnalysis {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.gaugeContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--color-card-bg);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.gaugeLabel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.currentLevel {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.levelDescription {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.analysisDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.detailItem {
+  background: var(--color-card-bg);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+}
+
+.detailTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.riskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.riskItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm);
+  background: white;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.riskType {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.riskDescription {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.patternGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.patternCard {
+  background: white;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
+}
+
+.patternCard:hover {
+  border-color: var(--color-primary);
+}
+
+.patternHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.patternType {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.patternLevel {
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 500;
+}
+
+.patternLevel.심각 {
+  background-color: var(--risk-serious);
+}
+
+.patternLevel.경고 {
+  background-color: var(--risk-warning);
+}
+
+.patternLevel.주의 {
+  background-color: var(--risk-caution);
+}
+
+.patternLevel.일반 {
+  background-color: var(--risk-normal);
+}
+
+.patternDescription {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.recommendations {
+  background: var(--color-card-bg);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+}
+
+.recommendationTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.recommendationList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.recommendationItem {
+  background: white;
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+}
+
+.recommendationHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xs);
+}
+
+.recommendationType {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.recommendationPriority {
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 500;
+}
+
+.recommendationPriority.심각 {
+  background-color: var(--risk-serious);
+}
+
+.recommendationPriority.경고 {
+  background-color: var(--risk-warning);
+}
+
+.recommendationPriority.주의 {
+  background-color: var(--risk-caution);
+}
+
+.recommendationPriority.일반 {
+  background-color: var(--risk-normal);
+}
+
+.recommendationContent {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 위험도 게이지 색상 */
+.riskGauge {
+  --gauge-serious: var(--risk-serious);
+  --gauge-warning: var(--risk-warning);
+  --gauge-caution: var(--risk-caution);
+  --gauge-normal: var(--risk-normal);
+}
+
+/* 위험도 태그 스타일 */
+.riskTag {
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 500;
+}
+
+.riskTag.serious {
+  background-color: var(--risk-serious);
+}
+
+.riskTag.warning {
+  background-color: var(--risk-warning);
+}
+
+.riskTag.caution {
+  background-color: var(--risk-caution);
+}
+
+.riskTag.normal {
+  background-color: var(--risk-normal);
+}
+
+/* 위험도 레벨 텍스트 색상 */
+.riskLevelText {
+  font-weight: 600;
+}
+
+.riskLevelText.serious {
+  color: var(--risk-serious);
+}
+
+.riskLevelText.warning {
+  color: var(--risk-warning);
+}
+
+.riskLevelText.caution {
+  color: var(--risk-caution);
+}
+
+.riskLevelText.normal {
+  color: var(--risk-normal);
+}
+
+/* 위험도 아이콘 */
+.riskIcon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.riskIcon.serious {
+  background-color: var(--risk-serious);
+  color: white;
+}
+
+.riskIcon.warning {
+  background-color: var(--risk-warning);
+  color: white;
+}
+
+.riskIcon.caution {
+  background-color: var(--risk-caution);
+  color: white;
+}
+
+.riskIcon.normal {
+  background-color: var(--risk-normal);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-md);
+  }
+
+  .gaugeContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .patternGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .patternCard {
+    padding: var(--spacing-sm);
+  }
+
+  .patternType {
+    font-size: 0.95rem;
+  }
+
+  .patternLevel {
+    font-size: 0.8rem;
+    padding: 3px 10px;
+  }
+
+  .patternDescription {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: var(--spacing-sm);
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .currentLevel {
+    font-size: 1.1rem;
+  }
+
+  .detailTitle,
+  .recommendationTitle {
+    font-size: 1rem;
+  }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1a1a1a;
+    --color-secondary: #2d2d2d;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #b0b0b0;
+    --color-border: #404040;
+    --color-card-bg: #2a2a2a;
+    --risk-serious-bg: #4a1a1a;
+    --risk-warning-bg: #4a2a1a;
+    --risk-caution-bg: #4a3a1a;
+    --risk-normal-bg: #1a2a4a;
+  }
+
+  .container,
+  .gaugeContainer,
+  .detailItem,
+  .recommendationItem {
+    background: var(--color-secondary);
+    border-color: var(--color-border);
+  }
+
+  .riskItem,
+  .patternCard,
+  .recommendationItem {
+    background: var(--color-card-bg);
+  }
+
+  .riskType,
+  .recommendationType {
+    color: var(--color-primary-light);
+  }
+
+  .riskTag.serious,
+  .riskTag.warning,
+  .riskTag.caution,
+  .riskTag.normal {
+    color: white;
+  }
+
+  .recommendationPriority.심각,
+  .recommendationPriority.경고,
+  .recommendationPriority.주의,
+  .recommendationPriority.일반 {
+    color: white;
+  }
+}
+
+/* 접근성 개선 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

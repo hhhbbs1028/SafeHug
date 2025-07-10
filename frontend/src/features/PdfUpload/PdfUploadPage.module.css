@@ -1,0 +1,272 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #faf7f2;
+}
+
+.uploadBox {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.title {
+  color: #7c3aed;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.loginNotice {
+  color: #7c3aed;
+  font-weight: 500;
+}
+
+.uploadArea {
+  border: 2px dashed #7c3aed;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.uploadArea:hover {
+  border-color: #6d28d9;
+  background-color: #f5f3ff;
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #7c3aed;
+}
+
+.uploadIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.fileInfo {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f5f3ff;
+  border-radius: 0.5rem;
+}
+
+.fileInfo p {
+  margin: 0.5rem 0;
+  color: #4b5563;
+}
+
+.error {
+  color: #dc2626;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.uploadButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.uploadButton:hover:not(:disabled) {
+  background-color: #6d28d9;
+}
+
+.uploadButton:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loginPrompt {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f5f3ff;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.loginPrompt p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.loginPrompt ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.loginPrompt li {
+  color: #6b7280;
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.loginPrompt li::before {
+  content: "✓";
+  color: #7c3aed;
+  position: absolute;
+  left: 0;
+}
+
+.loginButton {
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: #6d28d9;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .uploadBox {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .uploadArea {
+    padding: 1.5rem;
+  }
+
+  .uploadIcon {
+    font-size: 2.5rem;
+  }
+}
+
+.verificationResult {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.verificationResult.valid {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.verificationResult.invalid {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.verificationHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.validIcon {
+  color: #28a745;
+  font-size: 1.2rem;
+}
+
+.invalidIcon {
+  color: #dc3545;
+  font-size: 1.2rem;
+}
+
+.verificationDetails {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.verificationDetails h4 {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.verificationDetails ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.verificationDetails li {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.verificationDetails strong {
+  color: #495057;
+  margin-right: 0.5rem;
+}
+
+.validText {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.invalidText {
+  color: #dc3545;
+  font-weight: 500;
+}

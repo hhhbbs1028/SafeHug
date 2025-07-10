@@ -1,0 +1,230 @@
+/* 디자인 시스템 변수 */
+:root {
+  /* 색상 */
+  --color-primary: #6b4eff;
+  --color-primary-light: #8a7aff;
+  --color-primary-dark: #4a3dcc;
+  --color-secondary: #f5f5f5;
+  --color-text-primary: #2c3e50;
+  --color-text-secondary: #7f8c8d;
+  --color-background: #ffffff;
+  --color-border: #e0e0e0;
+  --color-success: #2ecc71;
+  --color-warning: #f1c40f;
+  --color-error: #e74c3c;
+  --color-error-light: #f9d4d4;
+  --color-error-dark: #e02424;
+  --color-warning-light: #fff9e6;
+  --color-warning-dark: #ffc700;
+  --color-success-light: #e6f9e6;
+  --color-success-dark: #00a650;
+
+  /* 위험도 색상 */
+  --risk-serious: #ff1744;
+  --risk-warning: #ffd600;
+  --risk-caution: #ff9800;
+  --risk-normal: #4caf50;
+
+  /* 위험도 배경색 */
+  --risk-serious-bg: #fff5f5;
+  --risk-warning-bg: #fffde7;
+  --risk-caution-bg: #fff3e0;
+  --risk-normal-bg: #e8f5e9;
+
+  /* 간격 */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* 테두리 */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  /* 그림자 */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+  /* 애니메이션 */
+  --transition-speed: 0.3s;
+  --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.messageItem {
+  padding: 1rem;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.messageItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.messageItem.selected {
+  border: 2px solid #6c5ce7;
+  background: #f8f7ff;
+}
+
+.messageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.senderInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sender {
+  font-weight: 600;
+  color: #2d3436;
+}
+
+.timestamp {
+  font-size: 0.875rem;
+  color: #636e72;
+}
+
+.riskIndicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.riskIcon {
+  font-size: 1.25rem;
+}
+
+.riskLevel {
+  font-size: 0.875rem;
+}
+
+.messageContent {
+  color: #2d3436;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.riskTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.riskTag {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.riskTypeIcon {
+  font-size: 1rem;
+}
+
+.riskType {
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .messageItem {
+    padding: 0.75rem;
+  }
+
+  .messageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .riskIndicator {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .riskTags {
+    gap: 0.375rem;
+  }
+
+  .riskTag {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* 다크 모드 */
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .container:hover {
+    border-color: var(--color-primary-dark);
+  }
+
+  .container.selected {
+    border-color: var(--color-primary);
+  }
+
+  .sender {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .time {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .content {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .riskType {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .riskType.심각 {
+    color: var(--risk-serious);
+  }
+
+  .riskType.경고 {
+    color: var(--risk-warning);
+  }
+
+  .riskType.주의 {
+    color: var(--risk-caution);
+  }
+
+  .riskType.일반 {
+    color: var(--risk-normal);
+  }
+}
+
+/* 접근성 */
+@media (prefers-reduced-motion: reduce) {
+  .container,
+  .checkbox,
+  .riskType {
+    transition: none;
+  }
+}

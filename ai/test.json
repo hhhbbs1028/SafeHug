@@ -1,0 +1,663 @@
+
+
+{
+  "report": {
+    "analyzedAt": "2025-04-03",
+    "summary": {
+      "totalMessages": 30,
+      "dangerMessages": 11,
+      "mainTypes": [
+        {
+          "type": "스토킹",
+          "level": "심각",
+          "count": 5
+        },
+        {
+          "type": "협박",
+          "level": "심각",
+          "count": 4
+        },
+        {
+          "type": "성적",
+          "level": "심각",
+          "count": 2
+        }
+      ]
+    },
+    "riskCalendar": [
+      {
+        "date": "2025-04-03",
+        "level": "심각"
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "찾아가",
+        "count": 5,
+        "level": "심각"
+      },
+      {
+        "keyword": "죽여버",
+        "count": 2,
+        "level": "심각"
+      },
+      {
+        "keyword": "후회하게",
+        "count": 1,
+        "level": "심각"
+      },
+      {
+        "keyword": "사진",
+        "count": 1,
+        "level": "심각"
+      }
+    ],
+    "aiRisk": {
+      "level": "심각",
+      "description": {
+        "summary": "이 대화는 매우 높은 위험 수준으로 판단됩니다.",
+        "reasons": [
+          "지속적인 위치 추적 발언 3회",
+          "살해 위협성 발언 2회 포함",
+          "성적 수치심 유발 발언 다수 존재"
+        ]
+      }
+    },
+    "guides": [
+      {
+        "type": "스토킹",
+        "level": "심각",
+        "advice": [
+          "즉각적인 신고가 필요합니다.",
+          "최대한 대화 증거 저장",
+          "전문가와의 상담"
+        ]
+      },
+      {
+        "type": "협박",
+        "level": "심각",
+        "advice": [
+          "대화 중단",
+          "보호자 연락",
+          "경찰 신고"
+        ]
+      },
+      {
+        "type": "성적",
+        "level": "심각",
+        "advice": [
+          "성폭력상담소 연락",
+          "증거 수집",
+          "법적 대응 준비"
+        ]
+      }
+    ]
+  },
+  "messages": [
+    {
+      "id": 1,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:15",
+      "content": "안녕하세요! 반가워요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "sender": "사용자",
+      "date": "2025-04-03",
+      "time": "14:16",
+      "content": "안녕하세요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:17",
+      "content": "오늘 날씨가 정말 좋네요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "sender": "사용자",
+      "date": "2025-04-03",
+      "time": "14:18",
+      "content": "네, 정말 좋네요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:20",
+      "content": "혹시 취미가 있으신가요?",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "sender": "사용자",
+      "date": "2025-04-03",
+      "time": "14:21",
+      "content": "음악 듣는 걸 좋아해요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:22",
+      "content": "와! 저도 음악 좋아해요. 어떤 장르 좋아하세요?",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "sender": "사용자",
+      "date": "2025-04-03",
+      "time": "14:23",
+      "content": "주로 팝송을 들어요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:25",
+      "content": "저도 팝송 좋아해요! 혹시 인스타그램 있으신가요?",
+      "risks": [
+        {
+          "type": "개인정보",
+          "level": "주의"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "sender": "사용자",
+      "date": "2025-04-03",
+      "time": "14:26",
+      "content": "죄송한데 개인정보는 말씀드리기 어려워요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:27",
+      "content": "아... 그냥 친해지고 싶었는데",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:28",
+      "content": "너 진짜 예쁘다... 옷도 잘 입네",
+      "risks": [
+        {
+          "type": "성적",
+          "level": "경고"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "sender": "사용자",
+      "date": "2025-04-03",
+      "time": "14:29",
+      "content": "그런 말씀은 좀 그렇네요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:30",
+      "content": "왜 그래? 나 좋아하는 거 아니었어?",
+      "risks": [
+        {
+          "type": "강요",
+          "level": "경고"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:31",
+      "content": "너 어디 사니? 나도 그 근처인데 만나자",
+      "risks": [
+        {
+          "type": "스토킹",
+          "level": "주의"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "sender": "사용자",
+      "date": "2025-04-03",
+      "time": "14:32",
+      "content": "만나고 싶지 않아요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:33",
+      "content": "왜 그래? 나 찾아갈게",
+      "risks": [
+        {
+          "type": "스토킹",
+          "level": "심각"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:35",
+      "content": "너 옷 벗은 사진 보내줘. 안 보내면 찾아가서 후회하게 해줄게",
+      "risks": [
+        { "type": "성적", "level": "경고" },
+        { "type": "협박", "level": "심각" }
+      ]
+    },
+    {
+      "id": 19,
+      "sender": "사용자",
+      "date": "2025-04-03",
+      "time": "14:36",
+      "content": "그만하세요. 신고할 거예요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:37",
+      "content": "너 진짜 죽여버릴거야. 내가 원하는 대로 해",
+      "risks": [
+        {
+          "type": "협박",
+          "level": "심각"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "sender": "사용자",
+      "date": "2025-04-03",
+      "time": "14:38",
+      "content": "정말 그만하세요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:40",
+      "content": "너 지금 어디야? 나 찾아갈게",
+      "risks": [
+        {
+          "type": "스토킹",
+          "level": "심각"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "sender": "사용자",
+      "date": "2025-04-03",
+      "time": "14:41",
+      "content": "신고할 거예요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:42",
+      "content": "너 친구들한테 다 말할거야. 네가 나한테 먼저 접근했다고",
+      "risks": [
+        {
+          "type": "협박",
+          "level": "심각"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:43",
+      "content": "너 진짜 예쁘다... 더 보여줘",
+      "risks": [
+        {
+          "type": "성적",
+          "level": "심각"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "sender": "사용자",
+      "date": "2025-04-03",
+      "time": "14:44",
+      "content": "정말 그만하세요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:45",
+      "content": "너 지금 어디야? 나 찾아갈게",
+      "risks": [
+        {
+          "type": "스토킹",
+          "level": "심각"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:46",
+      "content": "너 진짜 죽여버릴거야",
+      "risks": [
+        {
+          "type": "협박",
+          "level": "심각"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "sender": "사용자",
+      "date": "2025-04-03",
+      "time": "14:47",
+      "content": "정말 그만하세요",
+      "risks": [
+        {
+          "type": "일반",
+          "level": "일반"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "sender": "상대방",
+      "date": "2025-04-03",
+      "time": "14:48",
+      "content": "너 지금 어디야? 나 찾아갈게",
+      "risks": [
+        {
+          "type": "스토킹",
+          "level": "심각"
+        }
+      ]
+    }
+  ]
+}
+
+{
+  "data": {
+    "report": {
+      "summary": {
+        "dangerMessages": 5,
+        "mainTypes": [
+          {
+            "level": "HIGH",
+            "type": "SEXUAL",
+            "count": 3
+          },
+          {
+            "level": "MEDIUM",
+            "type": "THREAT",
+            "count": 2
+          }
+        ]
+      },
+      "aiRisk": {
+        "description": {
+          "summary": "위험도가 높은 메시지가 포함되어 있습니다.",
+          "reasons": ["성적 내용", "협박성 발언"]
+        }
+      }
+    },
+    "messages": [
+      {
+        "date": "2023-10-01T12:00:00Z",
+        "content": "위험한 메시지 내용"
+      },
+      {
+        "date": "2023-10-02T13:00:00Z",
+        "content": "또 다른 위험한 메시지"
+      }
+    ]
+  }
+}
+
+  "report": {
+            "type": "object",
+            "required": ["analyzedAt", "summary", "riskCalendar", "keywords", "aiRisk", "guides"],
+            "properties": {
+                "analyzedAt": {"type": "string", "format": "date"},
+                "summary": {
+                    "type": "object",
+                    "required": ["totalMessages", "dangerMessages", "mainTypes"],
+                    "properties": {
+                        "totalMessages": {"type": "integer", "minimum": 1},
+                        "dangerMessages": {"type": "integer", "minimum": 0},
+                        "mainTypes": {
+                            "type": "array",
+                            "minItems": 1,
+                            "maxItems": 4,
+                            "items": {
+                                "type": "object",
+                                "required": ["type", "level", "count"],
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": ["성적", "스토킹", "강요", "협박", "개인정보", "차별", "일반"]
+                                    },
+                                    "level": {
+                                        "type": "string",
+                                        "enum": ["일반", "주의", "경고", "심각"]
+                                    },
+                                    "count": {"type": "integer", "minimum": 1}
+                                }
+                            }
+                        }
+                    }
+                },
+                "riskCalendar": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                        "type": "object",
+                        "required": ["date", "level"],
+                        "properties": {
+                            "date": {"type": "string", "format": "date"},
+                            "level": {"type": "string", "enum": ["일반", "주의", "경고", "심각"]}
+                        }
+                    }
+                },
+                "keywords": {
+                    "type": "array",
+                    "minItems": 0,
+                    "maxItems": 10,
+                    "items": {
+                        "type": "object",
+                        "required": ["keyword", "count", "level"],
+                        "properties": {
+                            "keyword": {"type": "string"},
+                            "count": {"type": "integer", "minimum": 1},
+                            "level": {"type": "string", "enum": ["일반", "주의", "경고", "심각"]}
+                        }
+                    }
+                },
+                "aiRisk": {
+                    "type": "object",
+                    "required": ["level", "description"],
+                    "properties": {
+                        "level": {"type": "string", "enum": ["일반", "주의", "경고", "심각"]},
+                        "description": {
+                            "type": "object",
+                            "required": ["summary", "reasons"],
+                            "properties": {
+                                "summary": {"type": "string", "maxLength": 300},
+                                "reasons": {
+                                    "type": "array",
+                                    "minItems": 0,
+                                    "maxItems": 4,
+                                    "items": {"type": "string"}
+                                }
+                            }
+                        }
+                    }
+                },
+                "guides": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                        "type": "object",
+                        "required": ["type", "level", "advice"],
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "enum": ["성적", "스토킹", "강요", "협박", "개인정보", "차별"]
+                            },
+                            "level": {
+                                "type": "string",
+                                "enum": ["일반", "주의", "경고", "심각"]
+                            },
+                            "advice": {
+                                "type": "array",
+                                "minItems": 2,
+                                "maxItems": 4,
+                                "items": {"type": "string"}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "messages": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "required": ["id", "sender", "date", "time", "content", "risks"],
+                "properties": {
+                    "id": {"type": "integer"},
+                    "sender": {"type": "string"},
+                    "date": {"type": "string", "format": "date"},
+                    "time": {"type": "string"},
+                    "content": {"type": "string"},
+                    "risks": {
+                        "type": "array",
+                        "minItems": 1,
+                        "items": {
+                            "type": "object",
+                            "required": ["type", "level"],
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "enum": ["성적", "스토킹", "강요", "협박", "개인정보", "차별", "일반"]
+                                },
+                                "level": {
+                                    "type": "string",
+                                    "enum": ["일반", "주의", "경고", "심각"]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }

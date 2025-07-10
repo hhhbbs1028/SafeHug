@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 배경 원 -->
+  <circle cx="64" cy="64" r="64" fill="#7C5CBA"/>
+  
+  <!-- 얼굴 윤곽 -->
+  <circle cx="64" cy="64" r="48" fill="#FFFFFF"/>
+  
+  <!-- 눈 -->
+  <circle cx="48" cy="56" r="6" fill="#7C5CBA"/>
+  <circle cx="80" cy="56" r="6" fill="#7C5CBA"/>
+  
+  <!-- 미소 -->
+  <path d="M48 76C48 76 56 84 64 84C72 84 80 76 80 76" stroke="#7C5CBA" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- 장식 패턴 -->
+  <circle cx="64" cy="64" r="56" stroke="#9174D0" stroke-width="2" stroke-dasharray="4 4"/>
+</svg> 

@@ -1,0 +1,251 @@
+/* 전역 스타일 추가 - 최상단에 배치 */
+:global(body) {
+  background-color: var(--bg-primary);
+  margin: 0;
+  min-height: 100vh;
+}
+
+.faqContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px 0;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #6B4EFF;
+  text-align: center;
+  margin-bottom: 48px;
+  letter-spacing: -1px;
+  line-height: 1.3;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 80px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px;
+  align-items: start;
+}
+
+.faqItem {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid var(--primary-light);
+  height: fit-content;
+}
+
+.faqItem:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+  background: linear-gradient(to right, var(--primary-light), var(--primary));
+}
+
+.question {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-secondary);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover .question {
+  background: transparent;
+}
+
+.icon {
+  font-size: 24px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover .icon {
+  color: var(--text-light);
+  transform: scale(1.1);
+}
+
+.questionText {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover .questionText {
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.arrow {
+  color: var(--primary);
+  font-size: 12px;
+  transition: all 0.3s ease;
+  margin-left: 8px;
+}
+
+.faqItem:hover .arrow {
+  color: var(--text-light);
+  transform: scale(1.2);
+}
+
+.faqItem.open .arrow {
+  transform: rotate(180deg);
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: var(--bg-secondary);
+}
+
+.faqItem.open .answer {
+  max-height: 300px;
+  border-top: 1px solid var(--primary-light);
+  background: linear-gradient(
+    to bottom,
+    var(--bg-tertiary),
+    var(--bg-secondary)
+  );
+}
+
+.answer p {
+  padding: 24px 24px 24px 72px;
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.contactSection {
+  text-align: center;
+  margin-top: 60px;
+  padding-bottom: 80px;
+}
+
+.contactSection p {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.contactButton {
+  background: linear-gradient(to right, var(--primary), var(--primary-dark));
+  color: var(--text-light);
+  border: none;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.contactButton:hover {
+  background: linear-gradient(to right, var(--primary-dark), var(--primary));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 1024px) {
+  .faqGrid {
+    gap: 20px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faqContainer {
+    margin: 60px auto;
+  }
+
+  .faqGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 48px;
+  }
+
+  .contactSection {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faqContainer {
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    margin-bottom: 40px;
+    padding: 0 16px;
+  }
+
+  .question {
+    padding: 20px;
+  }
+
+  .questionText {
+    font-size: 15px;
+  }
+
+  .answer p {
+    padding: 0 20px 20px 60px;
+    font-size: 14px;
+  }
+
+  .contactButton {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,138 @@
+/* 푸터 전체 */
+.footer {
+  background: #fff; /* 완전 흰색 배경 */
+  border-top: 1px solid #e0e0e0;
+  padding: 2.5rem 0 1.2rem 0;
+  font-size: 1rem;
+  color: #222; /* 전체 텍스트 기본색 */
+}
+
+.footerContent {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center; /* 중앙 정렬 */
+  gap: 1.5rem; /* 섹션 간 여백 */
+}
+
+/* 좌측: 로고 + 정보 */
+.footerLeft {
+  display: flex;
+  align-items: center; /* 로고와 텍스트 수직 중앙 정렬 */
+  gap: 1.2rem;
+}
+
+.logo {
+  width: 10rem; /* 로고 컨테이너 크기 조정 */
+  height: auto;
+}
+
+.infoGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.97rem;
+}
+
+.label {
+  font-weight: 700;
+  color: #444; /* 강조 텍스트도 무채색 */
+  margin-right: 0.4rem;
+}
+
+.infoGroup span,
+.infoGroup div {
+  color: #444;
+}
+
+/* 우측: 링크 및 저작권 */
+.footerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.2rem;
+}
+
+.linkGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+  justify-content: center;
+  margin: 0.5rem 0 0.2rem 0;
+}
+
+.linkGroup a,
+.linkGroup .router-link {
+  color: #888; /* 링크도 회색 */
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 0.97rem;
+  transition: color 0.2s;
+}
+.linkGroup a:hover,
+.linkGroup .router-link:hover {
+  color: #222; /* hover 시 진한 회색 */
+}
+
+.footerLinks {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  color: #888;
+  font-size: 0.92rem;
+  margin-top: 0.2rem;
+}
+
+.footerLinks span {
+  transition: all 0.2s ease;
+  padding: 0.1rem 0;
+}
+
+.footerLinks span:hover {
+  color: #222;
+}
+
+.footerLinks span:nth-child(2) {
+  color: #e0e0e0;
+}
+
+.copyright {
+  color: #aaa;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 600px) {
+  .footerContent {
+    max-width: 98vw;
+    padding: 0 0.5rem;
+    gap: 1.1rem;
+  }
+  .footerLogo {
+    width: 80px; /* 모바일에서 로고 크기 조정 */
+  }
+  .linkGroup {
+    gap: 0.7rem;
+    font-size: 0.93rem;
+  }
+  .footerLinks {
+    font-size: 0.85rem;
+  }
+}
+
+/* 다크 모드 대응 */
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background: var(--bg-secondary);
+    border-top-color: var(--border-color);
+  }
+  .footerRight {
+    border-top-color: var(--border-color);
+  }
+  .label {
+    color: #bfc6ff;
+  }
+}

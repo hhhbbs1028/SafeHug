@@ -1,0 +1,180 @@
+/* 레이아웃 스타일 */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: var(--bg-secondary);
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.app-header h1 {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-normal);
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+main {
+  flex: 1;
+  background-color: var(--bg-primary);
+}
+
+footer {
+  background-color: var(--gray-800);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* 공통 컨테이너 스타일 */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+/* 섹션 타이틀 스타일 */
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+}
+
+/* 카드 스타일 */
+.card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+/* 그리드 레이아웃 */
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+/* 위험도 색상 변수 */
+:root {
+  --risk-severe: #ff0000;
+  --risk-warning: #ffa500;
+  --risk-caution: #ffff00;
+  --risk-normal: #00ff00;
+  --risk-unknown: #999999;
+}
+
+/* 로딩 상태 */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* 에러 상태 */
+.error {
+  color: var(--error);
+  padding: var(--spacing-md);
+  border: 1px solid var(--error);
+  border-radius: var(--radius-sm);
+  margin: var(--spacing-md) 0;
+}
+
+/* 버튼 스타일 */
+.button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all var(--transition-normal);
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+.button:hover {
+  background-color: var(--primary-hover);
+}
+
+.button:active {
+  background-color: var(--primary-active);
+}
+
+.button:disabled {
+  background-color: var(--primary-disabled);
+  cursor: not-allowed;
+}
+
+/* 입력 필드 스타일 */
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-muted);
+}
+
+/* 레이블 스타일 */
+.label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* 툴팁 스타일 */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--spacing-xs);
+  background: var(--gray-800);
+  color: var(--text-light);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  white-space: nowrap;
+  z-index: 1000;
+}

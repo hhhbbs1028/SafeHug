@@ -1,0 +1,28 @@
+requests==2.31.0
+safetensors>=0.4.3
+
+# API 서버 및 웹
+fastapi
+uvicorn
+
+# 모델 관련
+torch>=2.0
+transformers>=4.36.0
+kobert-transformers
+safetensors
+numpy
+pydantic
+
+# 텍스트 전처리 & NLP
+nltk
+scikit-learn
+networkx
+konlpy
+jpype1
+
+# AWS 연동
+boto3
+python-dotenv
+
+# 로깅 및 기타
+loguru

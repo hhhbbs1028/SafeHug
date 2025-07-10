@@ -1,0 +1,201 @@
+/* 배경 오버레이 스타일 */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-bg);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 사이드 메뉴 패널 스타일 */
+.sideMenu {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 320px;
+  height: 100vh;
+  background: var(--bg-secondary);
+  box-shadow: var(--shadow-lg);
+  transition: right 0.3s ease;
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--primary-lighter);
+}
+
+.open {
+  right: 0;
+}
+
+/* 메뉴 헤더 스타일 */
+.menuHeader {
+  padding: 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--primary-lighter);
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  width: 36px;
+  height: 36px;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+  background-color: var(--primary-muted);
+  color: var(--primary);
+}
+
+/* 메뉴 콘텐츠 스타일 */
+.menuContent {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background: var(--bg-secondary);
+}
+
+.menuSection {
+  margin-bottom: 2rem;
+}
+
+.menuSection h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.menuSection a {
+  display: flex;
+  align-items: center;
+  padding: 0.875rem 1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  margin-bottom: 0.5rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--primary-lighter);
+}
+
+.menuSection a:hover {
+  background: var(--primary-gradient);
+  color: var(--text-light);
+  transform: translateX(4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* 잠긴 메뉴 아이템 스타일 */
+.lockedMenu {
+  color: var(--text-secondary) !important;
+  background: var(--bg-tertiary) !important;
+  border: 1px solid var(--primary-lighter) !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.lockedMenu:hover {
+  transform: none !important;
+  background: var(--bg-tertiary) !important;
+  box-shadow: none !important;
+}
+
+/* 로그인 섹션 스타일 */
+.loginSection {
+  padding: 1.5rem;
+  border-top: 1px solid var(--primary-lighter);
+  background: var(--bg-secondary);
+}
+
+.loginButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.875rem;
+  background: var(--primary-gradient);
+  color: var(--text-light);
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+  border: none;
+  box-shadow: var(--shadow-md);
+}
+
+.loginButton:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+  .sideMenu {
+    width: 280px;
+    right: -280px;
+  }
+}
+
+.menuOverlay {
+  background-color: var(--overlay-bg-dark);
+  backdrop-filter: blur(4px);
+}
+
+.menuContainer {
+  box-shadow: var(--shadow-lg);
+  border-left: 1px solid var(--primary-light);
+}
+
+.menuItem {
+  border-bottom: 1px solid var(--primary-light);
+  transition: all 0.3s ease;
+}
+
+.menuItem:hover {
+  background: linear-gradient(to right, var(--primary-light), var(--primary));
+  color: var(--text-light);
+}
+
+.menuFooter {
+  border-top: 1px solid var(--primary-light);
+  background: var(--bg-secondary);
+}
+
+.menuButton {
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menuButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}

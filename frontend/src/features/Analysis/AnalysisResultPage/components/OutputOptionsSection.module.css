@@ -1,0 +1,386 @@
+.section {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.section:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.sectionTitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sectionTitle svg {
+  color: #6b46c1;
+}
+
+.formGroup {
+  margin-bottom: 2rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label svg {
+  color: #6b46c1;
+}
+
+.formatGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #faf7f2;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.formatLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.formatLabel:hover {
+  border-color: #6b46c1;
+  background-color: #faf7f2;
+}
+
+.formatLabel input[type="radio"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #6b46c1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.formatLabel input[type="radio"]:checked {
+  background-color: #6b46c1;
+}
+
+.formatIcon {
+  font-size: 2rem;
+  color: #6b46c1;
+}
+
+.formatLabel span {
+  font-size: 0.95rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #faf7f2;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.optionLabel:hover {
+  border-color: #6b46c1;
+  background-color: #faf7f2;
+}
+
+.optionLabel input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #6b46c1;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.optionLabel input[type="checkbox"]:checked {
+  background-color: #6b46c1;
+}
+
+.optionLabel span {
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+.helpText {
+  margin-top: 0.75rem;
+  padding-left: 2.75rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.optionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: rgba(124, 58, 237, 0.02);
+  border-radius: 1rem;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  transition: all 0.3s ease;
+}
+
+.optionGroup:hover {
+  background: rgba(124, 58, 237, 0.05);
+  border-color: rgba(124, 58, 237, 0.2);
+  transform: translateY(-1px);
+}
+
+.checkboxText {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.optionDescription {
+  font-size: 0.8125rem;
+  color: #6b7280;
+  margin-left: 2.5rem;
+  line-height: 1.5;
+}
+
+.orientationGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(124, 58, 237, 0.02);
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.orientationGroup:hover {
+  background: rgba(124, 58, 237, 0.05);
+}
+
+.orientationLabel {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.orientationOptions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 0.75rem;
+  font-size: 0.9375rem;
+  color: #111827;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237C3AED'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.5rem;
+  padding-right: 2.5rem;
+}
+
+.select:hover {
+  border-color: #d1d5db;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.1);
+}
+
+.previewNote {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(124, 58, 237, 0.05);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.previewNote p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* 다크 모드 지원 */
+@media (prefers-color-scheme: dark) {
+  .section {
+    background: #1a1a1a;
+    border-color: rgba(167, 139, 250, 0.1);
+  }
+
+  .section:hover {
+    border-color: rgba(167, 139, 250, 0.2);
+    box-shadow: 0 4px 12px rgba(167, 139, 250, 0.1);
+  }
+
+  .sectionTitle {
+    color: #a78bfa;
+  }
+
+  .formGroup {
+    margin-bottom: 1rem;
+  }
+
+  .formGroup select {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .checkboxLabel {
+    padding: 0.5rem;
+  }
+
+  .helpText {
+    padding-left: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .optionGroup {
+    background: rgba(167, 139, 250, 0.05);
+  }
+
+  .optionGroup:hover {
+    background: rgba(167, 139, 250, 0.1);
+  }
+
+  .checkboxLabel:hover {
+    background: rgba(167, 139, 250, 0.1);
+  }
+
+  .checkboxLabel input[type="checkbox"] {
+    border-color: #4b5563;
+    background-color: #2d2d2d;
+  }
+
+  .checkboxLabel input[type="checkbox"]:checked {
+    background-color: #7c3aed;
+    border-color: #7c3aed;
+  }
+
+  .checkboxText {
+    color: #e5e7eb;
+  }
+
+  .optionDescription {
+    color: #9ca3af;
+  }
+
+  .orientationGroup {
+    background: rgba(167, 139, 250, 0.05);
+  }
+
+  .orientationGroup:hover {
+    background: rgba(167, 139, 250, 0.1);
+  }
+
+  .orientationLabel {
+    color: #e5e7eb;
+  }
+
+  .select {
+    background-color: #2d2d2d;
+    border-color: #4b5563;
+    color: #f9fafb;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23A78BFA'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  }
+
+  .select:hover {
+    border-color: #6b7280;
+  }
+
+  .previewNote {
+    background: rgba(167, 139, 250, 0.05);
+    border-color: rgba(167, 139, 250, 0.1);
+  }
+
+  .previewNote p {
+    color: #9ca3af;
+  }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .section {
+    padding: 1.5rem;
+  }
+
+  .formatGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .optionsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+
+  .formatGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .formatLabel,
+  .optionLabel {
+    padding: 0.875rem;
+  }
+}

@@ -1,0 +1,129 @@
+:root {
+  /* 메인 색상 */
+  --primary: #6c5dd3;
+  --primary-light: #b7afff;
+  --primary-dark: #4b3c99;
+  --primary-lighter: #f3f1fa;
+  --primary-darker: #3a2c6b;
+  --primary-accent: #a89beb;
+  --primary-muted: #e6e3f7;
+  --primary-gradient: linear-gradient(135deg, #6c5dd3 0%, #b7afff 100%);
+  --primary-hover: #5a4fcf;
+  --primary-active: #4b3c99;
+  --primary-disabled: #b7afff;
+
+  /* 상태 색상 */
+  --danger: #ef4444;
+  --danger-light: #fecaca;
+  --warning: #f59e0b;
+  --warning-light: #fef3c7;
+  --success: #10b981;
+  --success-light: #d1fae5;
+
+  /* 그레이스케일 */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  /* 배경색 */
+  --bg-primary: #faf7f2;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f7f3fa;
+  --bg-point: #fff7e6;
+
+  /* 텍스트 색상 */
+  --text-primary: #22223b;
+  --text-secondary: #666666;
+  --text-light: #ffffff;
+  --text-muted: #a0a0b2;
+
+  /* 간격 */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* 테두리 반경 */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-full: 9999px;
+
+  /* 그림자 */
+  --shadow-sm: 0 2px 8px rgba(138, 127, 217, 0.1);
+  --shadow-md: 0 4px 16px rgba(138, 127, 217, 0.15);
+  --shadow-lg: 0 8px 24px rgba(138, 127, 217, 0.2);
+
+  /* 전환 */
+  --transition-fast: 150ms;
+  --transition-normal: 250ms;
+  --transition-slow: 350ms;
+
+  /* 스크롤바 */
+  --scrollbar-track: var(--gray-100);
+  --scrollbar-thumb: var(--gray-300);
+  --scrollbar-thumb-hover: var(--gray-400);
+
+  /* 소셜 로그인 색상 */
+  --google-bg: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+  --google-text: #757575;
+  --google-border: #ddd;
+  --kakao-bg: linear-gradient(135deg, #fee500 0%, #f4dc00 100%);
+  --kakao-text: #000000;
+  --naver-bg: linear-gradient(135deg, #03c75a 0%, #02b351 100%);
+  --naver-text: #ffffff;
+
+  /* 상태 메시지 색상 */
+  --error-bg: linear-gradient(135deg, #fff3f3 0%, #ffe8e8 100%);
+  --error-border: #ffd7d7;
+  --success-bg: linear-gradient(135deg, #f0fff4 0%, #e6ffed 100%);
+  --success-border: #c6f6d5;
+  --success-text: #2f855a;
+
+  /* 긴급 상황 색상 */
+  --emergency-bg: linear-gradient(to bottom, #fff5f5, #fff0f0);
+  --emergency-border: #ffd7d7;
+  --emergency-hover-bg: linear-gradient(to bottom, #ffe8e8, #fff5f5);
+  --emergency-hover-border: #ffb3b3;
+  --emergency-text: #e53e3e;
+
+  /* 오버레이 색상 */
+  --overlay-bg: rgba(0, 0, 0, 0.4);
+  --overlay-bg-dark: rgba(0, 0, 0, 0.5);
+  --overlay-light: rgba(255, 255, 255, 0.1);
+
+  /* 연결 상태 색상 */
+  --connected-bg: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  --disconnect-color: #dc3545;
+  --disconnect-border: #dc3545;
+
+  /* 로그인/회원가입 페이지 색상 */
+  --auth-bg: #f7f6f3;
+  --auth-gradient-start: #8080cb;
+  --auth-gradient-end: #b19ed2;
+  --auth-overlay: #fff8;
+  --auth-shadow: #b2c7e855;
+  --auth-input-bg: #eaf1fbcc;
+  --auth-input-shadow: #b2c7e822;
+  --auth-link: #4a90e2;
+  --auth-text: #5a6a7a;
+  --auth-border: #d0d7e2;
+  --auth-error: #ff4d4f;
+  --auth-success: #52c41a;
+  --auth-text-dark: #222;
+  --auth-text-light: #888;
+  --auth-text-medium: #444;
+  --auth-border-dark: #747775;
+  --auth-text-darker: #1f1f1f;
+  --auth-text-lighter: #7a7ab7;
+  --auth-input-bg-light: #f8f9fa;
+  --auth-text-gray: #666;
+}
